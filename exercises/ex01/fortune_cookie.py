@@ -13,7 +13,7 @@ from random import randint
 
 
 # Begin your solution here...
-rand_fortune: int = int(randint(1,5))
+rand_fortune: int = int(randint(1, 5))
 
 print("Your fortune cookie says...")
 
