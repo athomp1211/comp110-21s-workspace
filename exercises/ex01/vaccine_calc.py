@@ -33,4 +33,4 @@ today: datetime = datetime.today()
 days_til: timedelta = timedelta(days_til_per)
 target_date: datetime = today + days_til
 
-print("We will reach " + str(target_per) + "% vaccination in " + str(days_til_per) + " days, which falls on " + target_date.strftime("%B %d, %Y") + ".")
+print("We will reach "+str(target_per)+"% vaccination in "+str(days_til_per)+" days, which falls on "+target_date.strftime("%B %d, %Y") + ".")
