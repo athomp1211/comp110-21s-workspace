@@ -23,7 +23,7 @@ doses_adm: int = int(input("Doses administered: "))
 doses_per: int = int(input("Doses per day: "))
 target_per: int = int(input("Target percent vaccinated: "))
 
-target_ppl: int = int((pop) * (target_per // 2))
+target_ppl: int = int((pop) * (target_per / 100))
 already_vacc: int = int(doses_adm // 2)
 ppl_needed: int = int(target_ppl - already_vacc)
 doses_needed: int = int(ppl_needed * 2)
