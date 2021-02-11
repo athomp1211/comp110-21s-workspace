@@ -18,16 +18,16 @@ def fortune_cookie() -> str:
     """Returns random fortune."""
     rand_fortune: int = int(randint(1, 4))
     if rand_fortune == 1:
-        return ("A truly rich life contains love and art in abundance.")
+        return "A truly rich life contains love and art in abundance."
     else:
         if rand_fortune == 2:
-            return ("One can never fill another’s shoes, rather he must outgrow the old shoes.")
+            return "One can never fill another’s shoes, rather he must outgrow the old shoes."
         else:
             if rand_fortune == 3:
-                return ("Soon life will become more interesting.")
+                return "Soon life will become more interesting."
             else:
                 if rand_fortune == 4:
-                    return ("Your love life will be happy and harmonious.")
+                    return "Your love life will be happy and harmonious."
 
 
 # Python Idiom for "starting" the program when run as a module.

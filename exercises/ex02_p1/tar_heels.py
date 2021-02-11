@@ -16,16 +16,16 @@ def main() -> None:
 def tar_heels(arithmetic: int) -> str:
     """Converts booleans into corresponding TarHeel statement."""
     if arithmetic % 2 == 0 and arithmetic % 7 == 0:
-        return ("TAR HEELS")
+        return "TAR HEELS"
     else:
         if arithmetic % 2 == 0:
-            return ("TAR")
+            return "TAR"
         else:
             if arithmetic % 7 == 0:
-                return ("HEELS")
+                return "HEELS"
             else:
                 if arithmetic % 2 != 0 and arithmetic % 7 != 0:
-                    return ("CAROLINA")
+                    return "CAROLINA"
 
 
 if __name__ == "__main__":
