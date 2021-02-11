@@ -1,9 +1,11 @@
-def a(b: int, c: str) -> float:
-    b = b + 23
-    c = c + str(b)
-    abc: float = float(c)
-    return abc
-b: str = "1"
-c: int = 0
+def o(x: int) -> int:
+    return x * 4
 
-print(a(c, b))
+
+def m(x: int) -> int:
+    x = x * 2
+    return x
+
+g: int = 3
+wow: int = o(m(g))
+print(wow)
