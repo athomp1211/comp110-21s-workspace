@@ -11,6 +11,7 @@ def main() -> None:
     print("Your fortune cookie says...")
     print(fortune_cookie())
     print("Now, go spread positive vibes!")
+    NoReturn
 
 
 def fortune_cookie() -> str:

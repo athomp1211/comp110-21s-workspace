@@ -3,10 +3,14 @@
 __author__ = "730318766"
 
 
+from typing import NoReturn
+
+
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     choice: int = int(input("Enter an int: "))
     print(tar_heels(choice))
+    NoReturn
 
 
 def tar_heels(arithmetic: int) -> str:
