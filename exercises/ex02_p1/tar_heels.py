@@ -6,12 +6,11 @@ __author__ = "730318766"
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     choice: int = int(input("Enter an int: "))
-    print(tar_heels(arithmetic: int))
+    print(tar_heels(choice))
 
 
 def tar_heels(arithmetic: int) -> str:
     """Converts booleans into corresponding TarHeel statement."""
-    arithmetic: int = int(input("Enter an interger: "))
     if arithmetic % 2 == 0 and arithmetic % 7 == 0:
         return ("TAR HEELS")
     else:
