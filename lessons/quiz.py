@@ -5,3 +5,5 @@ def a(b: int, c: str) -> float:
     return abc
 b: str = "1"
 c: int = 0
+
+print(a(c, b))
