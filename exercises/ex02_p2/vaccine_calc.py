@@ -14,7 +14,7 @@ def main() -> None:
     x: int = days_to_target(population, doses, doses_per_day, target)
     y: str = future_date(x)
     print("We will reach " + str(target) + "% vaccination in " + str(x) + " days, which falls on " + str(y) + ".")
-    
+
 
 def days_to_target(population: int, doses: int, doses_per_day: int, target: int) -> int:
     """Returns an int number of days until reaching the target percent vaccinated."""
@@ -35,4 +35,4 @@ def future_date(days_til_per: int) -> str:
 
 
 if __name__ == "__main__":
-   main()
+    main()
