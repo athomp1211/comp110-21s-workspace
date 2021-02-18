@@ -12,7 +12,7 @@ def main() -> None:
     doses_per_day: int = int(input("Doses per day: "))
     target: int = int(input("Target percent vaccinated: "))
     x: int = days_to_target(population, doses, doses_per_day, target)
-    y: str = future_date(target_date)
+    y: str = future_date(x)
     print("We will reach " + str(target) + "% vaccination in " + str(x) + " days, which falls on " + str(y) + ".")
 
 
@@ -26,7 +26,7 @@ def days_to_target(population: int, doses: int, doses_per_day: int, target: int)
     return days_til_per
 
 
-def future_date(target_date: int) -> str
+def future_date(days_til_per: int) -> str:
     """Returns a str representation of the date that's int number of days from now."""
     today: datetime = datetime.today()
     days_til: timedelta = timedelta(days_til_per)
@@ -35,4 +35,4 @@ def future_date(target_date: int) -> str
 
 
 if __name__ == "__main__":
-    main()
+   main()
