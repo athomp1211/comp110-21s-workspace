@@ -10,11 +10,12 @@ while input("Do you need more love? yes/no -") == "yes":
 
 # Iterating a specific number of time
 i: int = 0 # i is typically short for index
-iterations: int = 10
+iterations: int = 1000000
 
 while i < iterations:
-    print(f"I love you! i: {i}")
-    i += 1
+    if i % 1000 == 0:
+        print(f"I love you! i: {i}")
+    i += 1 # Important that this increment is NOT in the if statement
 
 print("Have a lovely day.")
 
