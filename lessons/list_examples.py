@@ -5,3 +5,7 @@ rolls: list[int] # Declare a variable  whose type is list of ints
 rolls = [2, 3, 2, 6] # Initialized w/ list literal syntax
 
 print(f"Length of rolls is {len(rolls)}")
+
+from random import randint
+rolls.append(randint(1, 6))
+print(rolls)
