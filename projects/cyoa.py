@@ -7,24 +7,19 @@ __author__ = "730318766"
 
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
-    print(greet())
-    points: 
-    coin_flip
-    x: int = where_next(coin_flip)
+    greet()
+    points += 1
     options: int = int(input("*Coin Flip* Heads, Tails, or End Game? "))
     if options == "End Game":
-        print("So sad to see you go :( You accumulated " + str(points) + "! Goodbye.")
+        print(f"So sad to see you go {player} :( You accumulated {points}! Goodbye.")
     else:
-        if options == coin_flip:
-
-            
-
+        where_next(coin_flip())
 
 
 def greet() -> None:
     """Prints a welcome message for context and asks for player's name."""
-    print("Welcome to Heads or Tails! This game flips a coin, you choose whether it was heads or tails, and hope your luck is up! How many can you guess correctly in a row?")
     player: str = str(input("What's your name? "))
+    print(f"Welcome {player}, to Heads or Tails! This game flips a coin, you choose whether it was heads or tails, and hope your luck is up! How many can you guess correctly in a row?")
 
 
 def coin_flip() -> str:
@@ -39,6 +34,9 @@ def coin_flip() -> str:
     
 def where_next() -> str:
     """Returns points from option choice."""
+    options
+    if coin_flip == options:
+
     
 
 if __name__ == "__main__":
