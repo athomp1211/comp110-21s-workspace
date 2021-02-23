@@ -8,7 +8,7 @@ __author__ = "730318766"
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     greet()
-    points += 1
+    points: list[int]
     options: int = int(input("*Coin Flip* Heads, Tails, or End Game? "))
     if options == "End Game":
         print(f"So sad to see you go {player} :( You accumulated {points}! Goodbye.")
