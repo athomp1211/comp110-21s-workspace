@@ -39,8 +39,13 @@ def where_next(options: str, coin_flip: str, points: int) -> None:
         points += 1
     else:
         if options != coin_flip:
-            print(f"Incorrect :( {options}")
+            option_2: str = str(input("Incorrect :( would you like to try again? yes/no "))
+            if option_2 == "yes":
+                main()
+            else:
+                if option_2 == "no":
+                     print(f"So sad to see you go :( You accumulated {points}! Goodbye.")
+            
     
-
 if __name__ == "__main__":
     main()
