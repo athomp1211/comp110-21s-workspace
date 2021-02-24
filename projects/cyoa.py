@@ -34,9 +34,12 @@ def coin_flip() -> str:
     
 def where_next(options: str, coin_flip: str, points: int) -> None:
     """Returns points from option choice."""
-    while options == coin_flip:
+    if options == coin_flip:
         print("Correct, here's 1 point!")
         points += 1
+    else:
+        if options != coin_flip:
+            print(f"Incorrect :( {options}")
     
 
 if __name__ == "__main__":
