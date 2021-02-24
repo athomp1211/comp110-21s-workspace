@@ -9,12 +9,11 @@ def main() -> None:
     """The entrypoint of the program, when run as a module."""
     greet()
     points: int = 0
-    points: list[int]
-    options: int = int(input("*Coin Flip* Heads, Tails, or End Game? "))
+    options: str = str(input("*Coin Flip* Heads, Tails, or End Game? "))
     if options == "End Game":
-        print(f"So sad to see you go {player} :( You accumulated {points}! Goodbye.")
+        print(f"So sad to see you go :( You accumulated {points}! Goodbye.")
     else:
-        where_next(coin_flip())
+        where_next(options, coin_flip(), points)
 
 
 def greet() -> None:
@@ -31,13 +30,13 @@ def coin_flip() -> str:
     else:
         if coin == 2:
             return "Tails"
-    
-    
-def where_next() -> str:
-    """Returns points from option choice."""
-    options
-    if coin_flip == options:
 
+    
+def where_next(options: str, coin_flip: str, points: int) -> None:
+    """Returns points from option choice."""
+    while options == coin_flip:
+        print("Correct, here's 1 point!")
+        points += 1
     
 
 if __name__ == "__main__":
