@@ -10,10 +10,9 @@ def main() -> None:
     greet()
     points: int = 0
     options: str = str(input("*Coin Flip* Heads, Tails, or End Game? "))
-    if options == "End Game":
-        print(f"So sad to see you go :( You accumulated {points}! Goodbye.")
-    else:
+    while options == "Heads" or "Tails":
         where_next(options, coin_flip(), points)
+    print(f"So sad to see you go :( You accumulated {points} points! Goodbye.")
 
 
 def greet() -> None:
@@ -38,13 +37,7 @@ def where_next(options: str, coin_flip: str, points: int) -> None:
         print("Correct, here's 1 point!")
         points += 1
     else:
-        if options != coin_flip:
-            option_2: str = str(input("Incorrect :( would you like to try again? yes/no "))
-            if option_2 == "yes":
-                main()
-            else:
-                if option_2 == "no":
-                     print(f"So sad to see you go :( You accumulated {points}! Goodbye.")
+        
             
     
 if __name__ == "__main__":
