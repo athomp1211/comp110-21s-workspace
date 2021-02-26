@@ -13,3 +13,15 @@ def sum_algo(x: list[int]) -> int:
         i += 1
     #   False- Result is stored in total variable
     return total
+
+
+# Example usage of the sum_algo function
+odds: list[int] = [1, 3, 5, 7]
+odds_sum: int = sum_algo(odds)
+print(odds_sum)
+
+
+single: list[int] = [110]
+many: list[int] = [1, 3, 5]
+print(sum_algo(single))
+print(sum_algo(many))
