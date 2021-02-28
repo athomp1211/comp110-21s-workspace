@@ -1,4 +1,4 @@
-"""Coinflip Guessing Game"""
+"""Coinflip Guessing Game."""
 
 from random import randint
 
@@ -7,7 +7,6 @@ __author__ = "730318766"
 
 PENSIVE_FACE: str = "\U0001F614"
 THUMBS_UP: str = "\U0001F44D"
-WAVE: str = "\U0001F44B"
 player: str = ""
 points: int = 0
 what_next: str = ""
@@ -32,7 +31,7 @@ def greet() -> None:
     """Prints a welcome message for context and asks for player's name."""
     global player
     player = str(input("What's your name? "))
-    print(f"Welcome {player} {WAVE}, to Heads or Tails! This game flips a coin, you choose whether it was heads or tails, and hope your luck is up! How many can you guess correctly?")
+    print(f"Welcome {player}, to Heads or Tails! This game flips a coin and you choose whether it was heads or tails. How many can you guess correctly?")
 
 
 def coin_flip() -> str:
