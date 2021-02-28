@@ -8,14 +8,24 @@ __author__ = "730318766"
 PENSIVE_FACE: str = "\U0001F614"
 THUMBS_UP: str = "\U0001F44D"
 WAVE: str = "\U0001F44B"
+player: str = ""
+points: int = 0
+what_next: str = ""
 
 
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
+    global points
     greet()
-    player
-    points: int = 0
-    option_1(coin_flip(), points)
+    what_next: str = str(input("*Coin Flip* Heads, Tails, or End Game? (h/t/e) "))
+    if what_next == "e":
+        print(f"So sad to see you go {PENSIVE_FACE} You accumulated {points} points! Goodbye.")
+    else:
+        if what_next == "h":
+            points = option_1(points)
+        else:
+            if what_next == "t":
+                option_2()
 
 
 def greet() -> None:
@@ -29,48 +39,60 @@ def coin_flip() -> str:
     """Returns heads or tails from random coin flip."""
     coin: int = int(randint(1, 2))
     if coin == 1:
-        return "Heads"
+        return "h"
     else:
-        return "Tails"
+        return "t"
 
 
-def option_1(coin_flip: str, points: int) -> None:
-    """Prints a goodbye message if player ends game or branches to other options."""
-    what_next: str = str(input("Start Game or End Game? "))
-    if what_next == "End Game":
-        print(f"So sad to see you go {PENSIVE_FACE} You accumulated {points} points! Goodbye.")
-    else:
-        if what_next == "Start Game":
-            option_2(coin_flip, points)
-        else:
-            print("Try typing your answer again and make sure to capitalize!")
-            option_1(coin_flip, points)
-
-
-def option_2(coin_flip: str, points: int) -> None:
-    """Returns points from Heads or Tails option."""
-    heads_tails: str = str(input("*Coin flip* Heads or Tails? "))
-    if heads_tails == coin_flip:
-        print(f"Correct {player} {THUMBS_UP}, here's 1 point!")
+def option_1(points: int) -> int:
+    """Returns points from Heads option."""
+    if what_next == coin_flip:
+        print(f"Correct {player} , here's 1 point!")
         points += 1
-        option_3(points)
+        total: str = str(input("Would you like to see your total points? (y/n) "))
+        if total == "y":
+            print(f"You currently have {points} point(s).")
+        option_3()
     else:
-        if heads_tails != coin_flip:
+        if what_next != coin_flip:
             print(f"Sorry, that is incorrect {player} {PENSIVE_FACE}")
-            option_3(points)
+            total: str = str(input("Would you like to see your total points? (y/n) "))
+            if total == "y":
+                print(f"You currently have {points} point(s).")
+            option_3()
+    return points
 
 
-def option_3(points: int) -> None:
-    """Starts game over or ends game."""
-    next_step: str = str(input("Would you like to Try Again or End Game? "))
-    if next_step == "Try Again":
-        option_2(coin_flip(), points)
+def option_2() -> None:
+    """Reassigns points from Tails option."""
+    global points
+    if what_next == coin_flip:
+        print(f"Correct {player} , here's 1 point!")
+        points += 1
+        total: str = str(input("Would you like to see your total points? (y/n) "))
+        if total == "y":
+            print(f"You currently have {points} points.")
+        option_3()
     else:
-        if next_step == "End Game":
+        if what_next != coin_flip:
+            print(f"Sorry, that is incorrect {player} {PENSIVE_FACE}")
+            total: str = str(input("Would you like to see your total points? (y/n) "))
+            if total == "y":
+                print(f"You currently have {points} points.")
+            option_3()
+
+
+def option_3() -> None:
+    """Starts game over or ends game."""
+    global points
+    next_step: str = str(input("Would you like to Try Again or End Game? (t/e) "))
+    if next_step == "t":
+        print("Congrats, here's an extra point to start you off!")
+        points += 1
+        main()
+    else:
+        if next_step == "e":
             print(f"So sad to see you go {PENSIVE_FACE} You accumulated {points} points! Goodbye.")
-        else:
-            print("Try typing your answer again and make sure to capitalize!")
-            option_3(points)
 
             
 if __name__ == "__main__":
