@@ -31,7 +31,7 @@ def greet() -> None:
     """Prints a welcome message for context and asks for player's name."""
     global player
     player = str(input("What's your name? "))
-    print(f"Welcome {player}, to Heads or Tails! This game flips a coin and you choose whether it was heads or tails. How many can you guess correctly?")
+    print(f"Welcome {player}, this game flips a coin & you guess heads or tails. How many can you guess correctly?")
 
 
 def coin_flip() -> str:
