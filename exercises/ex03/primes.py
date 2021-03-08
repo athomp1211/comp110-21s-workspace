@@ -37,11 +37,11 @@ def list_primes(a: int, b: int) -> list[int]:
     nums: range = range(a, b)
     i: int = 0
     while i < len(nums):
-        if is_prime(nums[i]) == True:
+        if is_prime(nums[i]) is True:
             prime_nums.append(nums[i])
             i += 1
         else:
-            if is_prime(nums[i]) == False:
+            if is_prime(nums[i]) is False:
                 non_primes.append(nums[i])
                 i += 1
     return prime_nums

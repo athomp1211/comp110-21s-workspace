@@ -14,12 +14,12 @@ def main() -> None:
 def palindromify(x: str, y: bool) -> str:
     """Transforms str input into palindrome."""
     i: int = (len(x) - 1)
-    if y == True:
-         while i >= 0:
+    if y is True:
+        while i >= 0:
             x += x[i]
             i -= 1
     else:
-        if y == False:
+        if y is False:
             while i > 0:
                 x += x[i - 1]
                 i -= 1

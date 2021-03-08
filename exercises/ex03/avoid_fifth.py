@@ -10,7 +10,7 @@ def main() -> None:
 
 
 def avoid_fifth(x: str) -> str:
-    """Loops through given str and returns output without e's in it"""
+    """Loops through given str and returns output without e's in it."""
     y: str = ""
     i: int = 0
     while i < len(x):
@@ -20,8 +20,8 @@ def avoid_fifth(x: str) -> str:
             if x[i] == "E":
                 i += 1
             else:
-                 y += x[i]
-                 i += 1
+                y += x[i]
+                i += 1
     return y
 
 
