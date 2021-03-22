@@ -22,7 +22,7 @@ for player_name in players:
     #* for...in loops do these automatically
 
 
-# You can have kayes and values of any type! Notice this is the opposite mapping
+# You can have keys and values of any type! Notice this is the opposite mapping
 # that we had above. Adiitionally this is an example of a dictionary literal.
 jerseys: dict[int, str] = {15: "Brooks", 2: "Love", 5: "Bacot"}
 jerseys[23] = "Jordan"
