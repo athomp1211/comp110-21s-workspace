@@ -42,8 +42,27 @@ def head(non_mutated: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     for column in non_mutated:
         first_N: list[str] = []
         i: int = 0
-        while i <= N:
-            first_N.append(column)
+        while i < N:
+            first_N.append(non_mutated[column][i])
             i += 1
-        top_rows[] = first_N
+        top_rows[column] = first_N
     return top_rows
+
+
+def select(dont_mutate: dict[str, list[str]], columns: list[str]) -> dict[str, list[str]]:
+    """Produce a new column-based table with only a specific subset of the original columns."""
+    select_columns: dict[str, list[str]] = {}
+    for column in columns:
+        select_columns[column] = dont_mutate[column]
+    return select_columns
+
+
+def count(values: list[str]) -> dict[str, int]:
+    """Return the number of times that the given value appeared."""
+    how_many: dict[str, int] = {}
+    for value in values:
+        if value in how_many:
+            how_many[value] += 1
+        else:
+            how_many[value] = 1
+    return how_many
