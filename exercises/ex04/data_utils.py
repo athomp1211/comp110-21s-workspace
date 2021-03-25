@@ -44,7 +44,7 @@ def head(non_mutated: dict[str, list[str]], N: int) -> dict[str, list[str]]:
         i: int = 0
         while i < N:
             first_N.append(non_mutated[column][i])
-            i += 1
+            i += 1 
         top_rows[column] = first_N
     return top_rows
 
