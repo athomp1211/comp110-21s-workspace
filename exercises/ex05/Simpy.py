@@ -73,7 +73,7 @@ class Simpy:
         return Simpy(result)
 
     def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        """Produces a mask based on the equality of each item in the values attribute with another Simpy object or float."""
+        """Produces a mask based on the equality of each item in the values attribute with another."""
         mask: list[bool] = []
         if isinstance(rhs, float):
             for item in self.values:
@@ -85,7 +85,7 @@ class Simpy:
         return mask
 
     def __gt__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        """Produces a mask based on the greater than relationship between each item in the values attribute with another Simpy object or float."""
+        """Produces a mask based on the > relationship between each item in the values attribute with another."""
         mask: list[bool] = []
         if isinstance(rhs, float):
             for item in self.values:
