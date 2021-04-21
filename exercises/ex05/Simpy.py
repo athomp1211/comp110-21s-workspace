@@ -8,6 +8,8 @@ __author__ = "730318766"
 
 
 class Simpy:
+    """Utility class that is helpful for working with sequences of numerical data."""
+
     values: list[float]
 
     def __init__(self, values: list[float]):
